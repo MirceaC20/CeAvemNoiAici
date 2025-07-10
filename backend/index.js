@@ -90,6 +90,24 @@ app.get('/api/current-question', (req, res) => {
   }
 });
 
+app.get('/api/question/:questionIndexParam', (req, res) => {
+
+  try {
+    const questionIndex = parseInt(req.params.questionIndexParam, 10);
+
+    const question = questions.find(q => q.index === questionIndex);
+
+    if (!question) {
+      return res.status(404).json({ error: 'Question not found' });
+    }
+
+    res.json(question);
+  } catch (err) {
+    console.error('❌ Error loading current question:', err);
+    res.status(500).json({ error: 'Failed to load current question' });
+  }
+});
+
 app.get('/api/current-question/:index/wrong', (req, res) => {
   try {
     const io = req.app.get('io');

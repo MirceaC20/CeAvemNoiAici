@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-manager',
   standalone: true,
   templateUrl: './manager.component.html',
   styleUrls: ['./manager.component.scss'],
-  imports: [CommonModule]
+  imports: [CommonModule,FormsModule]
 })
 export class ManagerComponent implements OnInit {
   currentQuestion: any;
+  questionNumberInput: number | null = null; // nou
 
   constructor(private http: HttpClient) {}
 
@@ -25,6 +27,19 @@ export class ManagerComponent implements OnInit {
       },
       error: (err) => {
         console.error('❌ Failed to load current question', err);
+      }
+    });
+  }
+
+  fetchQuestionByNumber() {
+    if (this.questionNumberInput == null || isNaN(this.questionNumberInput)) return;
+
+    this.http.get<any>(`http://localhost:3000/api/question/${this.questionNumberInput}`).subscribe({
+      next: (data) => {
+        this.currentQuestion = data;
+      },
+      error: (err) => {
+        console.error('❌ Failed to load question', err);
       }
     });
   }

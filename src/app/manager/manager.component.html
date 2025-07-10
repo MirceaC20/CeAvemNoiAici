@@ -1,6 +1,19 @@
 <div class="manager-container">
-  <div class="manager-title">{{ currentQuestion?.index }}. {{ currentQuestion?.question }}</div>
+  <div class="question-loader">
+    <input 
+      type="number" 
+      [(ngModel)]="questionNumberInput" 
+      placeholder="Introdu numărul întrebării"
+    />
+    <button (click)="fetchQuestionByNumber()">Get</button>
+  </div>
+
+  <div class="manager-title">
+    {{ currentQuestion?.index }}. {{ currentQuestion?.question }}
+  </div>
+
   <button class="wrong-button" (click)="triggerWrongAnswer()">Greșeală</button>
+
   <div class="answer-list">
     <div 
       class="answer-item" 
