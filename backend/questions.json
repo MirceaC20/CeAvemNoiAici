@@ -2465,5 +2465,2433 @@
         "points": 4
       }
     ]
-  }
+  },
+  {
+    "index": 68,
+    "question": "Ce mănânci de post pentru că îți place și nu pentru că e de post?",
+    "answers": [
+      {
+        "text": "Fasole",
+        "points": 25
+      },
+      {
+        "text": "Zacuscă",
+        "points": 22
+      },
+      {
+        "text": "Cartofi",
+        "points": 13
+      },
+      {
+        "text": "Orez",
+        "points": 8
+      },
+      {
+        "text": "Sarmale",
+        "points": 8
+      },
+      {
+        "text": "Ciuperci",
+        "points": 7
+      },
+      {
+        "text": "Vinete",
+        "points": 6
+      },
+      {
+        "text": "Pateu vegetal",
+        "points": 3
+      }
+    ] 
+  },
+  {
+    "index": 69,
+    "question": "Aualeu, am uitat parola de la ...?",
+    "answers": [
+      {
+        "text": "Telefon",
+        "points": 37
+      },
+      {
+        "text": "Poșta electronică",
+        "points": 16
+      },
+      {
+        "text": "Card",
+        "points": 12
+      },
+      {
+        "text": "Rețea socială",
+        "points": 10
+      },
+      {
+        "text": "Seif",
+        "points": 8
+      },
+      {
+        "text": "Laptop",
+        "points": 7
+      },
+      {
+        "text": "Alarmă",
+        "points": 6
+      },
+      {
+        "text": "Interfon",
+        "points": 4
+      }
+    ]
+  },
+{
+  "index": 70,
+  "question": "Dacă nu ai prespapier, ce obiect de pe birou pui pe un teanc de foi ca să nu le ia vântul?",
+  "answers": [
+    {
+      "text": "Capsator",
+      "points": 24
+    },
+    {
+      "text": "Telefon",
+      "points": 12
+    },
+    {
+      "text": "Carte",
+      "points": 12
+    },
+    {
+      "text": "Cană",
+      "points": 8
+    },
+    {
+      "text": "Perforator",
+      "points": 7
+    },
+    {
+      "text": "Vază",
+      "points": 6
+    },
+    {
+      "text": "Riglă",
+      "points": 6
+    },
+    {
+      "text": "Scrumieră",
+      "points": 6
+    }
+  ]
+},
+{
+  "index": 71,
+  "question": "Am întrebat 100 de români, Ce foșnește?",
+  "answers": [
+    {
+      "text": "Pungă",
+      "points": 34
+    },
+    {
+      "text": "Hârtie",
+      "points": 27
+    },
+    {
+      "text": "Frunză",
+      "points": 20
+    },
+    {
+      "text": "Celofan",
+      "points": 7
+    },
+    {
+      "text": "Fâș",
+      "points": 5
+    },
+    {
+      "text": "Folie de aluminiu",
+      "points": 5
+    },
+    {
+      "text": "Polistiren",
+      "points": 2
+    }
+  ]
+},
+{
+    "index": 72,
+    "question": "Ce nu îți lipsește din geantă?",
+    "answers": [
+      {
+        "text": "Telefon",
+        "points": 36
+      },
+      {
+        "text": "Portofel",
+        "points": 22
+      },
+      {
+        "text": "Chei",
+        "points": 16
+      },
+      {
+        "text": "Baterie externă",
+        "points": 8
+      },
+      {
+        "text": "Ruj",
+        "points": 7
+      },
+      {
+        "text": "Servetele",
+        "points": 5
+      },
+      {
+        "text": "Parfum",
+        "points": 4
+      },
+      {
+        "text": "Cărți de vizită",
+        "points": 2
+      }
+    ]
+  },
+  {
+  "index": 73,
+  "question": "Ce culoare este greu de asortat?",
+  "answers": [
+    {
+      "text": "Verde",
+      "points": 31
+    },
+    {
+      "text": "Mov",
+      "points": 18
+    },
+    {
+      "text": "Roz",
+      "points": 15
+    },
+    {
+      "text": "Galben",
+      "points": 12
+    },
+    {
+      "text": "Roșu",
+      "points": 8
+    },
+    {
+      "text": "Portocaliu",
+      "points": 5
+    },
+    {
+      "text": "Negru",
+      "points": 5
+    },
+    {
+      "text": "Maro",
+      "points": 3
+    }
+  ]
+},
+{
+  "index": 74,
+  "question": "Am rugat 100 de români să completeze fraza rostită de o domnișoară finuță, Mai iubi, ți-am spus și anul trecut, eu în cort nu dorm pentru că mi-e frică de ...?",
+  "answers": [
+    {
+      "text": "Urși",
+      "points": 37
+    },
+    {
+      "text": "Șerpi",
+      "points": 18
+    },
+    {
+      "text": "Gândaci",
+      "points": 11
+    },
+    {
+      "text": "Țânțari",
+      "points": 9
+    },
+    {
+      "text": "Lupi",
+      "points": 8
+    },
+    {
+      "text": "Șoareci",
+      "points": 6
+    },
+    {
+      "text": "Păianjeni",
+      "points": 6
+    },
+    {
+      "text": "Șopârle",
+      "points": 5
+    }
+  ]
+},
+{
+  "index": 75,
+  "question": "În afară de glugă, ce îți mai poți acoperi capul atunci când ninge?",
+  "answers": [
+    {
+      "text": "Căciulă",
+      "points": 32
+    },
+    {
+      "text": "Fular",
+      "points": 28
+    },
+    {
+      "text": "Eșarfă",
+      "points": 14
+    },
+    {
+      "text": "Batic",
+      "points": 8
+    },
+    {
+      "text": "Poșetă",
+      "points": 6
+    },
+    {
+      "text": "Pungă",
+      "points": 6
+    },
+    {
+      "text": "Bască",
+      "points": 4
+    },
+    {
+      "text": "Mână",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 76,
+  "question": "Ce pui la geam de sărbători?",
+  "answers": [
+    {
+      "text": "Luminițe",
+      "points": 43
+    },
+    {
+      "text": "Crengi de brad",
+      "points": 15
+    },
+    {
+      "text": "Globuri",
+      "points": 8
+    },
+    {
+      "text": "Beteală",
+      "points": 8
+    },
+    {
+      "text": "Crăciuniță",
+      "points": 7
+    },
+    {
+      "text": "Steluțe",
+      "points": 6
+    },
+    {
+      "text": "Moș Crăciun",
+      "points": 4
+    },
+    {
+      "text": "Grâu",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 77,
+  "question": "În afară de legume și fructe, ce cumpără gospodinele, toamna, pentru conserve?",
+  "answers": [
+    {
+      "text": "Oțet",
+      "points": 25
+    },
+    {
+      "text": "Sare",
+      "points": 21
+    },
+    {
+      "text": "Conservant",
+      "points": 16
+    },
+    {
+      "text": "Borcane",
+      "points": 10
+    },
+    {
+      "text": "Pește",
+      "points": 6
+    },
+    {
+      "text": "Piper",
+      "points": 3
+    },
+    {
+      "text": "Zahăr",
+      "points": 3
+    },
+    {
+      "text": "Butoi",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 78,
+  "question": "Am rugat 100 de români să ne spună un obiect cu ținte",
+  "answers": [
+    {
+      "text": "Bocanci / Ghete",
+      "points": 25
+    },
+    {
+      "text": "Curea",
+      "points": 18
+    },
+    {
+      "text": "Cizme",
+      "points": 17
+    },
+    {
+      "text": "Geacă",
+      "points": 12
+    },
+    {
+      "text": "Pantofi",
+      "points": 9
+    },
+    {
+      "text": "Geantă / Poșetă",
+      "points": 8
+    },
+    {
+      "text": "Buzdugan",
+      "points": 6
+    },
+    {
+      "text": "Brățară",
+      "points": 5
+    }
+  ]
+},
+{
+  "index": 79,
+  "question": "Am întrebat 100 de români, ce fruct este mare?",
+  "answers": [
+    {
+      "text": "Pepene",
+      "points": 39
+    },
+    {
+      "text": "Pomelo",
+      "points": 24
+    },
+    {
+      "text": "Ananas",
+      "points": 12
+    },
+    {
+      "text": "Dovleac",
+      "points": 9
+    },
+    {
+      "text": "Gutuie",
+      "points": 8
+    },
+    {
+      "text": "Grepfrut",
+      "points": 6
+    }
+  ]
+},
+{
+  "index": 80,
+  "question": "În regatul animalelor, cărui animal îi sugerează hairstylistul să se dea cu balsam ca să nu i se încurce părul?",
+  "answers": [
+    {
+      "text": "Leu",
+      "points": 47
+    },
+    {
+      "text": "Maimuță",
+      "points": 17
+    },
+    {
+      "text": "Cal",
+      "points": 11
+    },
+    {
+      "text": "Urs",
+      "points": 9
+    },
+    {
+      "text": "Oaie",
+      "points": 6
+    },
+    {
+      "text": "Câine",
+      "points": 6
+    },
+    {
+      "text": "Zebră",
+      "points": 2
+    },
+    {
+      "text": "Lup",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 81,
+  "question": "Ce ți se pare mic, dar cumperi oricum pentru că se lasă după câteva purtări?",
+  "answers": [
+    {
+      "text": "Încălțări",
+      "points": 33
+    },
+    {
+      "text": "Tricou",
+      "points": 13
+    },
+    {
+      "text": "Pulover",
+      "points": 13
+    },
+    {
+      "text": "Bluză",
+      "points": 9
+    },
+    {
+      "text": "Pantaloni",
+      "points": 9
+    },
+    {
+      "text": "Ciorapi",
+      "points": 7
+    },
+    {
+      "text": "Maiou",
+      "points": 5
+    }
+  ]
+},
+{
+  "index": 82,
+  "question": "Ce joc se poate juca la birou?",
+  "answers": [
+    {
+      "text": "Șah",
+      "points": 31
+    },
+    {
+      "text": "Cărți",
+      "points": 28
+    },
+    {
+      "text": "Table",
+      "points": 16
+    },
+    {
+      "text": "Pe telefon",
+      "points": 9
+    },
+    {
+      "text": "Rummy",
+      "points": 6
+    },
+    {
+      "text": "Rebus",
+      "points": 5
+    },
+    {
+      "text": "X și O",
+      "points": 3
+    },
+    {
+      "text": "Darts",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 83,
+  "question": "Am rugat 100 de români să completeze fraza: Merg mereu la același frizer pentru că nu doar că tunde foarte bine dar și ...?",
+  "answers": [
+    {
+      "text": "Masează",
+      "points": 28
+    },
+    {
+      "text": "Bărbierește",
+      "points": 20
+    },
+    {
+      "text": "Coafează",
+      "points": 15
+    },
+    {
+      "text": "Costă puțin",
+      "points": 12
+    },
+    {
+      "text": "Povestește / E simpatic",
+      "points": 11
+    },
+    {
+      "text": "Mă spală pe cap",
+      "points": 6
+    },
+    {
+      "text": "Se mișcă repede",
+      "points": 4
+    }
+  ]
+},
+{
+  "index": 84,
+  "question": "Am rugat 100 de români să ne zică un tip de cabină, în afară de cea de duș",
+  "answers": [
+    {
+      "text": "Telefonică",
+      "points": 48
+    },
+    {
+      "text": "De probă",
+      "points": 21
+    },
+    {
+      "text": "De vot",
+      "points": 6
+    },
+    {
+      "text": "Telecabină",
+      "points": 5
+    },
+    {
+      "text": "Fotografică",
+      "points": 4
+    },
+    {
+      "text": "De paznic",
+      "points": 4
+    },
+    {
+      "text": "De camion",
+      "points": 4
+    },
+    {
+      "text": "De machiaj",
+      "points": 4
+    }
+  ]
+},
+{
+  "index": 85,
+  "question": "Ce beau fetele la o petrecere de logodnă?",
+  "answers": [
+    {
+      "text": "Șampanie",
+      "points": 24
+    },
+    {
+      "text": "Suc",
+      "points": 14
+    },
+    {
+      "text": "Lichior",
+      "points": 13
+    },
+    {
+      "text": "Vin",
+      "points": 12
+    },
+    {
+      "text": "Cocktail",
+      "points": 12
+    },
+    {
+      "text": "Bere",
+      "points": 8
+    },
+    {
+      "text": "Whisky",
+      "points": 6
+    },
+    {
+      "text": "Gin",
+      "points": 4
+    }
+  ]
+},
+{
+  "index": 86,
+  "question": "Am rugat 100 de români să completeze fraza spusă de o domnișoară la întâlnirea cu iubitul: Am visat tare frumos, se făcea că eram regină și aveam un pat uriaș din aur, încrustat cu multe pietre prețioase, de exemplu cu ...?",
+  "answers": [
+    {
+      "text": "Diamant",
+      "points": 26
+    },
+    {
+      "text": "Rubin",
+      "points": 23
+    },
+    {
+      "text": "Smarald",
+      "points": 20
+    },
+    {
+      "text": "Safir",
+      "points": 17
+    },
+    {
+      "text": "Agat",
+      "points": 8
+    },
+    {
+      "text": "Chihlimbar",
+      "points": 4
+    },
+    {
+      "text": "Topaz",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 87,
+  "question": "Ce cumperi pentru casă dacă îți place culoarea maro?",
+  "answers": [
+    {
+      "text": "Mobilă",
+      "points": 35
+    },
+    {
+      "text": "Covor",
+      "points": 20
+    },
+    {
+      "text": "Pătură",
+      "points": 16
+    },
+    {
+      "text": "Draperie / Perdea",
+      "points": 16
+    },
+    {
+      "text": "Lenjerie de pat",
+      "points": 7
+    },
+    {
+      "text": "Parchet",
+      "points": 3
+    },
+    {
+      "text": "Gresie",
+      "points": 3
+    }
+  ]
+},
+{
+  "index": 88,
+  "question": "Chiar dacă este fierbinte, din ce mâncare guști pentru că nu mai poți de poftă?",
+  "answers": [
+    {
+      "text": "Ciorbă",
+      "points": 44
+    },
+    {
+      "text": "Sarmale",
+      "points": 19
+    },
+    {
+      "text": "Supă",
+      "points": 11
+    },
+    {
+      "text": "Tocană",
+      "points": 11
+    },
+    {
+      "text": "Ciulama",
+      "points": 5
+    },
+    {
+      "text": "Orez cu lapte",
+      "points": 5
+    },
+    {
+      "text": "Varză",
+      "points": 3
+    },
+    {
+      "text": "Mămăligă",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 89,
+  "question": "Am întrebat 100 de români, ce poți uita într-o bancă?",
+  "answers": [
+    {
+      "text": "Buletin",
+      "points": 25
+    },
+    {
+      "text": "Card",
+      "points": 20
+    },
+    {
+      "text": "Telefon",
+      "points": 10
+    },
+    {
+      "text": "Caiet",
+      "points": 9
+    },
+    {
+      "text": "Penar",
+      "points": 8
+    },
+    {
+      "text": "Umbrelă",
+      "points": 7
+    },
+    {
+      "text": "Bani",
+      "points": 7
+    },
+    {
+      "text": "Geantă",
+      "points": 7
+    }
+  ]
+},
+{
+  "index": 90,
+  "question": "Am rugat 100 de români să completeze sintagma: punct de ...?",
+  "answers": [
+    {
+      "text": "Lucru",
+      "points": 22
+    },
+    {
+      "text": "Prim ajutor",
+      "points": 13
+    },
+    {
+      "text": "Colectare",
+      "points": 11
+    },
+    {
+      "text": "Sprijin",
+      "points": 10
+    },
+    {
+      "text": "Reper",
+      "points": 8
+    },
+    {
+      "text": "Control",
+      "points": 7
+    },
+    {
+      "text": "Plecare",
+      "points": 5
+    },
+    {
+      "text": "Vedere",
+      "points": 5
+    }
+  ]
+},
+{
+  "index": 91,
+  "question": "Ce figură geometrică poate fi vedeta unei probleme de matematică?",
+  "answers": [
+    {
+      "text": "Triunghi",
+      "points": 34
+    },
+    {
+      "text": "Romb",
+      "points": 19
+    },
+    {
+      "text": "Cerc",
+      "points": 17
+    },
+    {
+      "text": "Pătrat",
+      "points": 14
+    },
+    {
+      "text": "Cub",
+      "points": 8
+    },
+    {
+      "text": "Hexagon",
+      "points": 3
+    },
+    {
+      "text": "Trapez",
+      "points": 3
+    },
+    {
+      "text": "Dreptunghi",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 92,
+  "question": "Am rugat 100 de români să completeze fraza spusă de o viitoare mireasă cu o săptămână înainte de nuntă: Nu-mi mai place rochia de mireasă pe care mi-am luat-o, mi se pare că este prea ...?",
+  "answers": [
+    {
+      "text": "Largă",
+      "points": 20
+    },
+    {
+      "text": "Scurtă",
+      "points": 19
+    },
+    {
+      "text": "Strâmtă",
+      "points": 17
+    },
+    {
+      "text": "Lungă",
+      "points": 15
+    },
+    {
+      "text": "Decoltată",
+      "points": 13
+    },
+    {
+      "text": "Demodată",
+      "points": 6
+    },
+    {
+      "text": "Urâtă",
+      "points": 5
+    }
+  ]
+},
+{
+  "index": 93,
+  "question": "Unde isi ține un copil orarul?",
+  "answers": [
+    {
+      "text": "Perete",
+      "points": 31
+    },
+    {
+      "text": "Birou",
+      "points": 28
+    },
+    {
+      "text": "Ghiozdan",
+      "points": 17
+    },
+    {
+      "text": "Penar",
+      "points": 10
+    },
+    {
+      "text": "Ușa de la dormitor",
+      "points": 6
+    },
+    {
+      "text": "Dulap",
+      "points": 5
+    },
+    {
+      "text": "Frigider",
+      "points": 3
+    }
+  ]
+},
+{
+  "index": 94,
+  "question": "Vă rog să îmi puneți o cupă cu înghețată de ciocolată iar apoi una de ...?",
+  "answers": [
+    {
+      "text": "Vanilie",
+      "points": 59
+    },
+    {
+      "text": "Fructe de pădure",
+      "points": 10
+    },
+    {
+      "text": "Fistic",
+      "points": 9
+    },
+    {
+      "text": "Zmeură",
+      "points": 8
+    },
+    {
+      "text": "Căpșune",
+      "points": 7
+    },
+    {
+      "text": "Mentă",
+      "points": 5
+    },
+    {
+      "text": "Caramel",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 95,
+  "question": "Am rugat 100 de români să completeze fraza spusă de o soție zâmbitoare și iubitoare: Dragul meu, eu mă ocup doar de farfurii, te las pe tine să speli ...?",
+  "answers": [
+    {
+      "text": "Paharele",
+      "points": 31
+    },
+    {
+      "text": "Oalele",
+      "points": 22
+    },
+    {
+      "text": "Cratițele",
+      "points": 19
+    },
+    {
+      "text": "Tacâmurile",
+      "points": 10
+    },
+    {
+      "text": "Aragazul",
+      "points": 7
+    },
+    {
+      "text": "Cănile",
+      "points": 5
+    },
+    {
+      "text": "Tăvile",
+      "points": 4
+    },
+    {
+      "text": "Tigăile",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 96,
+  "question": "Am rugat 100 de români să completeze fraza: Sora mea s-a uitat la mine și mi-a zis să-mi îndrept ...?",
+  "answers": [
+    {
+      "text": "Spatele",
+      "points": 40
+    },
+    {
+      "text": "Părul",
+      "points": 37
+    },
+    {
+      "text": "Gulerul",
+      "points": 5
+    },
+    {
+      "text": "Pălăria",
+      "points": 5
+    },
+    {
+      "text": "Fusta",
+      "points": 4
+    },
+    {
+      "text": "Cravata",
+      "points": 4
+    },
+    {
+      "text": "Privirea",
+      "points": 3
+    },
+    {
+      "text": "Ochelarii",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 97,
+  "question": "Ce culoare folosește un copil să picteze un tablou de vară?",
+  "answers": [
+    {
+      "text": "Verde",
+      "points": 29
+    },
+    {
+      "text": "Galben",
+      "points": 25
+    },
+    {
+      "text": "Albastru",
+      "points": 18
+    },
+    {
+      "text": "Roșu",
+      "points": 10
+    },
+    {
+      "text": "Alb",
+      "points": 6
+    },
+    {
+      "text": "Roz",
+      "points": 6
+    },
+    {
+      "text": "Crem",
+      "points": 4
+    },
+    {
+      "text": "Portocaliu",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 98,
+  "question": "Am întrebat 100 de români, ce-i mai mică și mai mică decât doamna bibilică?",
+  "answers": [
+    {
+      "text": "O gâză",
+      "points": 38
+    },
+    {
+      "text": "Vrăbia",
+      "points": 14
+    },
+    {
+      "text": "Puiul de găină",
+      "points": 10
+    },
+    {
+      "text": "Bobocul",
+      "points": 6
+    },
+    {
+      "text": "Rândunica",
+      "points": 5
+    },
+    {
+      "text": "Porumbelul",
+      "points": 5
+    },
+    {
+      "text": "Prepeliță",
+      "points": 4
+    },
+    {
+      "text": "Colibri",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 99,
+  "question": "Ce desert nu mai mănânci pentru că s-a uscat?",
+  "answers": [
+    {
+      "text": "Cozonac",
+      "points": 31
+    },
+    {
+      "text": "Chec",
+      "points": 14
+    },
+    {
+      "text": "Plăcintă",
+      "points": 11
+    },
+    {
+      "text": "Fursec",
+      "points": 10
+    },
+    {
+      "text": "Biscuiți",
+      "points": 9
+    },
+    {
+      "text": "Tort",
+      "points": 8
+    },
+    {
+      "text": "Clătite",
+      "points": 7
+    },
+    {
+      "text": "Gogoși",
+      "points": 4
+    }
+  ]
+},
+{
+  "index": 100,
+  "question": "Ce miros îți place să simți dimineața când te trezești?",
+  "answers": [
+    {
+      "text": "Cafea",
+      "points": 39
+    },
+    {
+      "text": "Lavandă",
+      "points": 14
+    },
+    {
+      "text": "Trandafiri",
+      "points": 12
+    },
+    {
+      "text": "Iasomie",
+      "points": 11
+    },
+    {
+      "text": "Aer curat",
+      "points": 7
+    },
+    {
+      "text": "Parfum",
+      "points": 5
+    },
+    {
+      "text": "Tei",
+      "points": 4
+    },
+    {
+      "text": "Vanilie",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 101,
+  "question": "Am fost prin mall mai degrabă să mă plimb, dar mi-am luat totuși un tricou. N-am putut rezista pentru că era ...?",
+  "answers": [
+    {
+      "text": "Frumos",
+      "points": 34
+    },
+    {
+      "text": "Colorat",
+      "points": 22
+    },
+    {
+      "text": "Ieftin / La reducere",
+      "points": 18
+    },
+    {
+      "text": "Cald",
+      "points": 9
+    },
+    {
+      "text": "Cu desene",
+      "points": 6
+    },
+    {
+      "text": "Din bumbac",
+      "points": 3
+    },
+    {
+      "text": "De firmă",
+      "points": 3
+    },
+    {
+      "text": "De calitate",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 102,
+  "question": "Ce se blochează exact atunci când ești pe grabă?",
+  "answers": [
+    {
+      "text": "Ușa",
+      "points": 42
+    },
+    {
+      "text": "Liftul",
+      "points": 22
+    },
+    {
+      "text": "Cheia",
+      "points": 10
+    },
+    {
+      "text": "Fermoarul",
+      "points": 9
+    },
+    {
+      "text": "Telefonul",
+      "points": 8
+    },
+    {
+      "text": "Traficul",
+      "points": 5
+    },
+    {
+      "text": "Calculatorul",
+      "points": 4
+    }
+  ]
+},
+{
+  "index": 103,
+  "question": "Ce articol vestimentar își dorește o femeie să aibă în mai multe culori?",
+  "answers": [
+    {
+      "text": "Bluză",
+      "points": 29
+    },
+    {
+      "text": "Rochie",
+      "points": 27
+    },
+    {
+      "text": "Fustă",
+      "points": 15
+    },
+    {
+      "text": "Eșarfă",
+      "points": 9
+    },
+    {
+      "text": "Sutien",
+      "points": 8
+    },
+    {
+      "text": "Pulover",
+      "points": 5
+    },
+    {
+      "text": "Tricou",
+      "points": 4
+    },
+    {
+      "text": "Sacou",
+      "points": 3
+    }
+  ]
+},
+{
+  "index": 104,
+  "question": "Am rugat 100 de români să completeze fraza: Cum a fost sfârșitul tău de săptămână? Că eu nu vreau să mă laud, dar am fost plecați la ...?",
+  "answers": [
+    {
+      "text": "Mare",
+      "points": 53
+    },
+    {
+      "text": "Munte",
+      "points": 17
+    },
+    {
+      "text": "Țară",
+      "points": 7
+    },
+    {
+      "text": "Părinți",
+      "points": 6
+    },
+    {
+      "text": "Socri",
+      "points": 4
+    },
+    {
+      "text": "Paris",
+      "points": 3
+    },
+    {
+      "text": "Piscină",
+      "points": 2
+    },
+    {
+      "text": "Mănăstire",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 105,
+  "question": "Am întrebat 100 de români: Ce vezi în camera unui adolescent pasionat de muzică?",
+  "answers": [
+    {
+      "text": "Postere",
+      "points": 18
+    },
+    {
+      "text": "Căști",
+      "points": 17
+    },
+    {
+      "text": "Chitară",
+      "points": 16
+    },
+    {
+      "text": "Boxe",
+      "points": 12
+    },
+    {
+      "text": "Pian",
+      "points": 12
+    },
+    {
+      "text": "Discuri",
+      "points": 10
+    },
+    {
+      "text": "Vioară",
+      "points": 6
+    },
+    {
+      "text": "Tobe",
+      "points": 5
+    }
+  ]
+},
+{
+  "index": 106,
+  "question": "Am întrebat 100 de români: Ce mănânci ca pe semințe?",
+  "answers": [
+    {
+      "text": "Alune",
+      "points": 56
+    },
+    {
+      "text": "Floricele",
+      "points": 13
+    },
+    {
+      "text": "Fistic",
+      "points": 7
+    },
+    {
+      "text": "Nuci",
+      "points": 6
+    },
+    {
+      "text": "Sticksuri",
+      "points": 4
+    },
+    {
+      "text": "Covrigei",
+      "points": 4
+    },
+    {
+      "text": "Caju",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 107,
+  "question": "Am întrebat 100 de români: Unde aștepți până ți se lungesc urechile?",
+  "answers": [
+    {
+      "text": "Stație",
+      "points": 41
+    },
+    {
+      "text": "Doctor / Spital",
+      "points": 29
+    },
+    {
+      "text": "Taxe și impozite",
+      "points": 11
+    },
+    {
+      "text": "Aeroport",
+      "points": 4
+    },
+    {
+      "text": "Primărie",
+      "points": 3
+    },
+    {
+      "text": "Gară / Tren",
+      "points": 3
+    },
+    {
+      "text": "Coafor",
+      "points": 2
+    },
+    {
+      "text": "Poștă",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 108,
+  "question": "Am întrebat 100 de români: Ce poate fi din marmură?",
+  "answers": [
+    {
+      "text": "Pardoseală",
+      "points": 20
+    },
+    {
+      "text": "Scară / Balustradă",
+      "points": 19
+    },
+    {
+      "text": "Cruce",
+      "points": 17
+    },
+    {
+      "text": "Statuie / Monument",
+      "points": 11
+    },
+    {
+      "text": "Masă",
+      "points": 8
+    },
+    {
+      "text": "Blat de bucătărie",
+      "points": 6
+    },
+    {
+      "text": "Cavou",
+      "points": 2
+    },
+    {
+      "text": "Gard",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 109,
+  "question": "Pune-mi te rog în pahar o gură de ...?",
+  "answers": [
+    {
+      "text": "Vin",
+      "points": 23
+    },
+    {
+      "text": "Suc",
+      "points": 22
+    },
+    {
+      "text": "Țuică",
+      "points": 18
+    },
+    {
+      "text": "Apă",
+      "points": 12
+    },
+    {
+      "text": "Coniac",
+      "points": 8
+    },
+    {
+      "text": "Ceai",
+      "points": 6
+    },
+    {
+      "text": "Vișinată",
+      "points": 6
+    },
+    {
+      "text": "Bere",
+      "points": 5
+    }
+  ]
+},
+{
+  "index": 110,
+  "question": "Pfiu, ce m-ai speriat rău, ai strănutat așa de tare că am scăpat ...?",
+  "answers": [
+    {
+      "text": "Furculița",
+      "points": 39
+    },
+    {
+      "text": "Lingura",
+      "points": 15
+    },
+    {
+      "text": "Telefonul",
+      "points": 11
+    },
+    {
+      "text": "Lingurița",
+      "points": 11
+    },
+    {
+      "text": "Pâinea",
+      "points": 8
+    },
+    {
+      "text": "Paharul",
+      "points": 8
+    },
+    {
+      "text": "Ceasca",
+      "points": 2
+    },
+    {
+      "text": "Scobitoarea",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 111,
+  "question": "Ce floare nu o uzi în grădină cu furtunul pentru că îți e teamă că o vei rupe?",
+  "answers": [
+    {
+      "text": "Lalea",
+      "points": 46
+    },
+    {
+      "text": "Mușcată",
+      "points": 15
+    },
+    {
+      "text": "Crin",
+      "points": 11
+    },
+    {
+      "text": "Panseluță",
+      "points": 8
+    },
+    {
+      "text": "Trandafir",
+      "points": 7
+    },
+    {
+      "text": "Ghiocel",
+      "points": 5
+    },
+    {
+      "text": "Zambilă",
+      "points": 4
+    },
+    {
+      "text": "Narcisă",
+      "points": 4
+    }
+  ]
+},
+{
+  "index": 112,
+  "question": "Am întrebat 100 de români, în afară de legume, ce mai pui într-o salată?",
+  "answers": [
+    {
+      "text": "Ulei",
+      "points": 38
+    },
+    {
+      "text": "Sare",
+      "points": 20
+    },
+    {
+      "text": "Oțet",
+      "points": 16
+    },
+    {
+      "text": "Brânză",
+      "points": 7
+    },
+    {
+      "text": "Semințe",
+      "points": 6
+    },
+    {
+      "text": "Maioneză",
+      "points": 5
+    },
+    {
+      "text": "Ou",
+      "points": 4
+    }
+  ]
+},
+{
+  "index": 113,
+  "question": "Am rugat 100 de români să completeze fraza: Am văzut la magazinul de decorațiuni, covoare special concepute pentru a aduce un plus de eleganță în ...?",
+  "answers": [
+    {
+      "text": "Sufragerie",
+      "points": 39
+    },
+    {
+      "text": "Dormitor",
+      "points": 30
+    },
+    {
+      "text": "Baie",
+      "points": 10
+    },
+    {
+      "text": "Hol",
+      "points": 7
+    },
+    {
+      "text": "Bucătărie",
+      "points": 6
+    },
+    {
+      "text": "Hotel",
+      "points": 3
+    },
+    {
+      "text": "Camera copilului",
+      "points": 3
+    },
+    {
+      "text": "Birou",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 114,
+  "question": "Am rugat 100 de români să completeze fraza: Ooof, iar trebuie să duc la reparat ...?",
+  "answers": [
+    {
+      "text": "Încălțările",
+      "points": 26
+    },
+    {
+      "text": "Telefonul",
+      "points": 18
+    },
+    {
+      "text": "Ceasul",
+      "points": 14
+    },
+    {
+      "text": "Televizorul",
+      "points": 10
+    },
+    {
+      "text": "Mașina",
+      "points": 8
+    },
+    {
+      "text": "Laptopul",
+      "points": 6
+    },
+    {
+      "text": "Ochelarii",
+      "points": 5
+    }
+  ]
+},
+{
+  "index": 115,
+  "question": "Ce iei pe tine atunci când mama îți spune să te înfofolești pentru că e frig afară?",
+  "answers": [
+    {
+      "text": "Fular",
+      "points": 23
+    },
+    {
+      "text": "Căciulă",
+      "points": 21
+    },
+    {
+      "text": "Geacă",
+      "points": 19
+    },
+    {
+      "text": "Palton",
+      "points": 12
+    },
+    {
+      "text": "Pulover",
+      "points": 11
+    },
+    {
+      "text": "Mănuși",
+      "points": 8
+    },
+    {
+      "text": "Vestă",
+      "points": 3
+    },
+    {
+      "text": "Hanorac",
+      "points": 3
+    }
+  ]
+},
+{
+  "index": 116,
+  "question": "Dacă ar butona telefonul în timp ce zboară, în ce ar putea intra din neatenție Superman?",
+  "answers": [
+    {
+      "text": "Clădire",
+      "points": 25
+    },
+    {
+      "text": "Avion",
+      "points": 15
+    },
+    {
+      "text": "Nor",
+      "points": 11
+    },
+    {
+      "text": "Pasăre",
+      "points": 9
+    },
+    {
+      "text": "Munte",
+      "points": 9
+    },
+    {
+      "text": "Stâlp",
+      "points": 8
+    },
+    {
+      "text": "Copac",
+      "points": 8
+    },
+    {
+      "text": "Zid",
+      "points": 7
+    }
+  ]
+},
+{
+  "index": 117,
+  "question": "Ce fruct mănânci chiar dacă e un pic storcit?",
+  "answers": [
+    {
+      "text": "Banană",
+      "points": 23
+    },
+    {
+      "text": "Căpșună",
+      "points": 14
+    },
+    {
+      "text": "Pară",
+      "points": 12
+    },
+    {
+      "text": "Portocală",
+      "points": 10
+    },
+    {
+      "text": "Prună",
+      "points": 9
+    },
+    {
+      "text": "Strugure",
+      "points": 7
+    },
+    {
+      "text": "Kiwi",
+      "points": 6
+    },
+    {
+      "text": "Cireașă",
+      "points": 5
+    }
+  ]
+},
+{
+  "index": 118,
+  "question": "Am rugat 100 de români să completeze fraza : Am buzunarele pline cu ...?",
+  "answers": [
+    {
+      "text": "Bani",
+      "points": 40
+    },
+    {
+      "text": "Semințe",
+      "points": 17
+    },
+    {
+      "text": "Șervețele / Batiste",
+      "points": 12
+    },
+    {
+      "text": "Bomboane",
+      "points": 9
+    },
+    {
+      "text": "Chei",
+      "points": 4
+    },
+    {
+      "text": "Alune",
+      "points": 3
+    },
+    {
+      "text": "Bonuri",
+      "points": 2
+    },
+    {
+      "text": "Scame",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 119,
+  "question": "Ce nu suna bine dar suna tare?",
+  "answers": [
+    {
+      "text": "Ceas",
+      "points": 26
+    },
+    {
+      "text": "Alarmă",
+      "points": 17
+    },
+    {
+      "text": "Sonerie",
+      "points": 15
+    },
+    {
+      "text": "Telefon",
+      "points": 13
+    },
+    {
+      "text": "Sirena",
+      "points": 12
+    },
+    {
+      "text": "Bormașină",
+      "points": 3
+    },
+    {
+      "text": "Sticle sparte",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 120,
+  "question": "Ce ai in casa si pare din lemn dar de fapt nu e?",
+  "answers": [
+    {
+      "text": "Parchet",
+      "points": 39
+    },
+    {
+      "text": "Dulap / Șifonier",
+      "points": 23
+    },
+    {
+      "text": "Masă",
+      "points": 8
+    },
+    {
+      "text": "Tapet",
+      "points": 8
+    },
+    {
+      "text": "Tâmplărie PVC",
+      "points": 7
+    },
+    {
+      "text": "Linoleum",
+      "points": 4
+    },
+    {
+      "text": "Ramă",
+      "points": 4
+    },
+    {
+      "text": "Blat de bucătărie",
+      "points": 3
+    }
+  ]
+},
+{
+  "index": 121,
+  "question": "Sunt foarte mandru de copilul meu, merge la olimpiada pe tara la ...?",
+  "answers": [
+    {
+      "text": "Matematică",
+      "points": 46
+    },
+    {
+      "text": "Fizică",
+      "points": 20
+    },
+    {
+      "text": "Română",
+      "points": 13
+    },
+    {
+      "text": "Chimie",
+      "points": 8
+    },
+    {
+      "text": "Engleză",
+      "points": 5
+    },
+    {
+      "text": "Geografie",
+      "points": 3
+    },
+    {
+      "text": "Informatică",
+      "points": 3
+    },
+    {
+      "text": "Istorie",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 122,
+  "question": "Dacă nu știi să gătești, cu ce îți servești socrii când vin în vizită?",
+  "answers": [
+    {
+      "text": "Pizza",
+      "points": 31
+    },
+    {
+      "text": "Cafea",
+      "points": 15
+    },
+    {
+      "text": "Sandvici",
+      "points": 11
+    },
+    {
+      "text": "Prăjituri",
+      "points": 8
+    },
+    {
+      "text": "Suc",
+      "points": 8
+    },
+    {
+      "text": "Alune",
+      "points": 6
+    },
+    {
+      "text": "Sărățele",
+      "points": 4
+    },
+    {
+      "text": "Biscuiți",
+      "points": 4
+    }
+  ]
+},
+{
+  "index": 123,
+  "question": "Ce vietate de companie poate avea un copil care trăiește la fermă?",
+  "answers": [
+    {
+      "text": "Câine",
+      "points": 38
+    },
+    {
+      "text": "Miel",
+      "points": 21
+    },
+    {
+      "text": "Pisică",
+      "points": 13
+    },
+    {
+      "text": "Cal",
+      "points": 9
+    },
+    {
+      "text": "Iepure",
+      "points": 8
+    },
+    {
+      "text": "Purcel",
+      "points": 6
+    },
+    {
+      "text": "Ponei",
+      "points": 3
+    }
+  ]
+},
+{
+  "index": 124,
+  "question": "Ce ar putea împrumuta o mamă de la fiica ei adolescentă deoarece au aceeași mărime?",
+  "answers": [
+    {
+      "text": "Pantofi",
+      "points": 33
+    },
+    {
+      "text": "Bluză",
+      "points": 14
+    },
+    {
+      "text": "Geantă",
+      "points": 10
+    },
+    {
+      "text": "Rochie",
+      "points": 8
+    },
+    {
+      "text": "Sandale",
+      "points": 7
+    },
+    {
+      "text": "Sutien",
+      "points": 6
+    },
+    {
+      "text": "Tricou",
+      "points": 5
+    },
+    {
+      "text": "Fustă",
+      "points": 5
+    }
+  ]
+},
+{
+  "index": 125,
+  "question": "În afară de trandafir, ce altă plantă înțeapă?",
+  "answers": [
+    {
+      "text": "Cactus",
+      "points": 42
+    },
+    {
+      "text": "Măceș",
+      "points": 23
+    },
+    {
+      "text": "Scaiete",
+      "points": 16
+    },
+    {
+      "text": "Urzică",
+      "points": 12
+    },
+    {
+      "text": "Zmeur",
+      "points": 3
+    },
+    {
+      "text": "Salcâm",
+      "points": 2
+    },
+    {
+      "text": "Cătină",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 126,
+  "question": "Ce ținea bunica atârnat pe perete în bucătărie?",
+  "answers": [
+    {
+      "text": "Polonic / Lingură",
+      "points": 18
+    },
+    {
+      "text": "Tablou / Icoană",
+      "points": 17
+    },
+    {
+      "text": "Ștergar",
+      "points": 16
+    },
+    {
+      "text": "Calendar",
+      "points": 13
+    },
+    {
+      "text": "Usturoi",
+      "points": 12
+    },
+    {
+      "text": "Ceas",
+      "points": 7
+    },
+    {
+      "text": "Busuioc",
+      "points": 4
+    },
+    {
+      "text": "Candelă",
+      "points": 3
+    }
+  ]
+},
+{
+  "index": 127,
+  "question": "Ce culoare pot avea ochelarii de înot ai unui copil?",
+  "answers": [
+    {
+      "text": "Albastru",
+      "points": 30
+    },
+    {
+      "text": "Verde",
+      "points": 20
+    },
+    {
+      "text": "Roșu",
+      "points": 15
+    },
+    {
+      "text": "Roz",
+      "points": 12
+    },
+    {
+      "text": "Galben",
+      "points": 8
+    },
+    {
+      "text": "Negru",
+      "points": 6
+    },
+    {
+      "text": "Alb",
+      "points": 6
+    },
+    {
+      "text": "Mov",
+      "points": 3
+    }
+  ]
+},
+{
+  "index": 128,
+  "question": "Completează fraza spusă de el către ea, ți-ai pus cosmeticele tale pe partea mea din dulapul din baie, iar acum eu nu găsesc ...?",
+  "answers": [
+    {
+      "text": "Aparatul de ras",
+      "points": 39
+    },
+    {
+      "text": "Crema / Spuma de ras",
+      "points": 25
+    },
+    {
+      "text": "Deodorantul",
+      "points": 9
+    },
+    {
+      "text": "Periuța de dinți",
+      "points": 9
+    },
+    {
+      "text": "Loc liber",
+      "points": 8
+    },
+    {
+      "text": "Parfumul",
+      "points": 8
+    },
+    {
+      "text": "Loțiunea după ras",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 129,
+  "question": "Ooof, a trecut vara și eu nu am apucat să mănânc ...?",
+  "answers": [
+    {
+      "text": "Pepene",
+      "points": 28
+    },
+    {
+      "text": "Cireșe",
+      "points": 24
+    },
+    {
+      "text": "Căpșune",
+      "points": 20
+    },
+    {
+      "text": "Înghețată",
+      "points": 12
+    },
+    {
+      "text": "Roșii",
+      "points": 6
+    },
+    {
+      "text": "Vișine",
+      "points": 5
+    },
+    {
+      "text": "Mure",
+      "points": 3
+    },
+    {
+      "text": "Zmeură",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 130,
+  "question": "În scorbura cărui arbore își face o veveriță?",
+  "answers": [
+    {
+      "text": "Stejar",
+      "points": 34
+    },
+    {
+      "text": "Alun",
+      "points": 27
+    },
+    {
+      "text": "Brad",
+      "points": 11
+    },
+    {
+      "text": "Nuc",
+      "points": 7
+    },
+    {
+      "text": "Plop",
+      "points": 6
+    },
+    {
+      "text": "Tei",
+      "points": 6
+    },
+    {
+      "text": "Fag",
+      "points": 5
+    },
+    {
+      "text": "Castan",
+      "points": 4
+    }
+  ]
+},
+{
+  "index": 131,
+  "question": "Azi la birou, m-am împiedicat de cablul de la ... ?",
+  "answers": [
+    {
+      "text": "Calculator",
+      "points": 48
+    },
+    {
+      "text": "Telefon",
+      "points": 25
+    },
+    {
+      "text": "Laptop",
+      "points": 10
+    },
+    {
+      "text": "Imprimantă",
+      "points": 6
+    },
+    {
+      "text": "Televizor",
+      "points": 6
+    },
+    {
+      "text": "Modem / Internet",
+      "points": 3
+    },
+    {
+      "text": "Frigider",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 132,
+  "question": "Am văzut pe stradă o mașină de ...?",
+  "answers": [
+    {
+      "text": "Gunoi",
+      "points": 38
+    },
+    {
+      "text": "Pompieri",
+      "points": 21
+    },
+    {
+      "text": "Poliție",
+      "points": 18
+    },
+    {
+      "text": "Salvare",
+      "points": 7
+    },
+    {
+      "text": "...capotabilă",
+      "points": 5
+    },
+    {
+      "text": "Pâine",
+      "points": 5
+    },
+    {
+      "text": "Tuns iarba",
+      "points": 2
+    },
+    {
+      "text": "Fițe",
+      "points": 2
+    }
+  ]
+},
+{
+  "index": 133,
+  "question": "Pe cine rogi să te vopsească dacă nu ai găsit loc la coafor?",
+  "answers": [
+    {
+      "text": "Prietena",
+      "points": 27
+    },
+    {
+      "text": "Vecină",
+      "points": 20
+    },
+    {
+      "text": "Mamă",
+      "points": 20
+    },
+    {
+      "text": "Fiică",
+      "points": 12
+    },
+    {
+      "text": "Soț",
+      "points": 10
+    },
+    {
+      "text": "Soră",
+      "points": 9
+    },
+    {
+      "text": "Colega",
+      "points": 2
+    }
+  ]
+}
 ]

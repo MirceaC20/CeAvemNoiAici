@@ -48,8 +48,6 @@ export class GameComponent implements OnInit {
   roundNumber = 1;
   roundMultiplier = 1;
   roundPoints = 0;
-  doublePoints = false;
-  triplePoints = false;
   teamNames = ['Echipa 1', 'Echipa 2'];
   readyForNext = false;
   showBigX = false;
@@ -233,8 +231,8 @@ export class GameComponent implements OnInit {
   }
 
   getAutoMultiplier(): number {
-    if (this.roundNumber >= 6) return 3;
-    if (this.roundNumber >= 4) return 2;
+    if (this.roundNumber >= 5) return 3;
+    if (this.roundNumber >= 3) return 2;
     return 1;
   }
 
