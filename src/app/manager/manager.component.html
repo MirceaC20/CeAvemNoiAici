@@ -1,0 +1,12 @@
+<div class="manager-container">
+  <div class="manager-title">{{ currentQuestion?.index }}. {{ currentQuestion?.question }}</div>
+  <button class="wrong-button" (click)="triggerWrongAnswer()">Greșeală</button>
+  <div class="answer-list">
+    <div 
+      class="answer-item" 
+      *ngFor="let answer of currentQuestion?.answers; let i = index"
+      (click)="revealAnswer(i)">
+      {{ answer.text }} — {{ answer.points }}
+    </div>
+  </div>
+</div>

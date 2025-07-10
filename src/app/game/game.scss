@@ -1,0 +1,453 @@
+.game-wrapper {
+  background: url('/assets/background.jpg') center center no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 20px;
+  color: white;
+  font-family: 'Arial Black', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 30px;
+}
+
+.player-score, .round-score-box {
+  position: relative;
+  background: linear-gradient(to top, #1b1b8c 0%, #000099 100%);
+  color: white;
+  border: 5px solid #c9e1ef;
+  padding: 10px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: auto;
+  
+  box-shadow: 2px 20px 12px rgba(69, 44, 156, 0.858);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), transparent);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  * {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.round-score-box {
+  background: linear-gradient(to bottom, #ffcc00 0%, #cc9900 100%);
+  color: #222;
+  width: auto;
+  font-size: 1.4rem;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 20px;
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+
+  &::before {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), transparent);
+  }
+}
+
+.round-title {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.round-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.multiplier-button {
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  background-color: #e5ff00;
+  border: 3px solid #000000;
+  color: rgb(0, 0, 0);
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.multiplier-button:hover {
+  background-color: rgb(115, 92, 27);
+}
+
+.round-points-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+}
+
+.value-with-multiplier {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.value {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #222;
+  text-align: center;
+}
+
+.multiplier {
+  font-size: 1.2rem;
+  color: #444;
+  margin-left: 20%;
+  margin-right: 20%;
+  line-height: 1;
+}
+
+.question-stats-box {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  z-index: 9999;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  pointer-events: none; // Nu interferează cu clickurile
+}
+
+.multiplier.mirror {
+  visibility: hidden; // ascuns vizual, dar ocupă spațiu
+}
+
+.answers {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+
+  .answers-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .answer {
+    width: 360px;
+    height: 80px;
+    background: linear-gradient(to bottom, #51aaff, #005bbb);
+    border: 3px solid #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.4s ease, transform 0.3s ease;
+
+    &.revealed {
+      background: linear-gradient(to bottom, #291ec6, #005bbb);
+      transform: scale(1.03);
+    }
+
+    &.visible {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 50%;
+      width: 100%;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), transparent);
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      z-index: 1;
+    }
+  }
+
+  .answer-text {
+    flex: 1;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .answer-points {
+    background: #ffcc00;
+    color: #222;
+    padding: 6px 16px;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+    .hidden-image {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    padding-left: 30%;
+    border-radius: 12px;
+    }
+}
+
+.answer.hidden {
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.answers-columned {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.answers-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.answer:hover {
+  background-color: #0033aa;
+}
+
+@keyframes fadeInAnswer {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.top-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.top-controls button {
+  margin: 0 5px;
+  padding: 10px;
+  width: 220px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: rgb(18, 5, 75);
+  border:  2px solid rgb(255, 255, 255);
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.controls button:hover {
+  background-color: darkred;
+}
+
+.strikes {
+  margin-top: 20px;
+  font-size: 2rem;
+  color: red;
+}
+
+.big-x {
+  position: fixed; // era posibil absolute cu context greșit
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25rem; // mai mare acum
+  color: red;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  z-index: 99999; // forțat să fie mereu în față
+  pointer-events: none;
+  border:  25px solid crimson;
+  border-radius: 50px;
+}
+
+.mistake-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+}
+
+.mistake-button {
+  font-size: 1rem;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: crimson !important;
+  color: white !important;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.mistake-button:disabled {
+  background-color: gray !important;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.mistake-button:hover {
+  background-color: darkred !important;
+}
+
+.strikes-inline {
+  font-size: 2rem;
+  color: red;
+  display: flex;
+  gap: 5px;
+}
+
+.answer-left, .answer-right {
+  display: flex;
+  align-items: center;
+}
+.team-name-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 300px;
+  padding-left: 0%;
+  padding-right: 0px;
+}
+
+.random-button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 1.6rem;
+  cursor: pointer;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.team-name-input {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  outline: none;
+  width: 100%;
+  padding-left: 40px;
+
+  &:focus {
+    outline: 2px solid #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+  }
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  .multiplier-button {
+    background-color: #00ccff;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .multiplier-button:hover {
+    background-color: #0088aa;
+  }
+}
+
+.round-indicator {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 2px 2px 4px black;
+  margin-bottom: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+
+.reset-button {
+  margin-top: 20px;
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #222;
+  color: white;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+
+  &:hover {
+    background-color: #444;
+  }
+}

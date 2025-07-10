@@ -10,11 +10,14 @@
       "url": "http://localhost:4200/"
     },
     {
-      "name": "ng test",
-      "type": "chrome",
+      "name": "Debug Backend",
+      "type": "node",
       "request": "launch",
-      "preLaunchTask": "npm: test",
-      "url": "http://localhost:9876/debug.html"
+      "program": "${workspaceFolder}/backend/index.js",
+      "cwd": "${workspaceFolder}/backend",
+      "runtimeExecutable": "node",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
     }
   ]
 }

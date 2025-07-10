@@ -1,0 +1,139 @@
+<div class="game-wrapper" *ngIf="currentQuestion">
+  <div class="big-x" *ngIf="showBigX">❌</div>
+  
+<div class="round-indicator">
+        Runda {{ roundNumber }}
+    </div>
+        <div class="question-stats-box">
+        <p>Întrebări: {{ questionStats.used }}/{{ questionStats.total }}</p>
+        </div>
+    <div class="top-controls">
+        <button class="multiplier-button" (click)="playIntroSound()">🎶 Redă Intro</button>
+        <button class="multiplier-button" (click)="nextQuestion()" [disabled]="!readyForNext">
+            ➡ Intrebarea urmatoare
+        </button>
+        <button class="multiplier-button" (click)="undoLastAssignment()" [disabled]="!lastAssignment">
+            < Undo puncte rundă
+        </button>
+        <button class="reset-button" (click)="resetGame()">🔁 Începe un nou set</button>
+
+    </div>
+
+  <!-- SCORURI -->
+  <div class="scoreboard">
+    <!-- Echipa 1 -->
+    <div class="player-score left">
+      <div class="team-name-wrapper">
+        <input
+        [(ngModel)]="teamNames[0]"
+        maxlength="20"
+        appAutoScale
+        #autoScale1="appAutoScale"
+        class="team-name-input"
+        />
+        <button class="random-button" (click)="setRandomTeamName(0)">🎲</button>
+        </div>
+      <div class="score">{{ playerScores[0] }}</div>
+      <button
+        class="multiplier-button"
+        (click)="assignPointsToTeam(0)"
+        [disabled]="lastAssignment !== null"
+        >
+        Adaugă punctele rundei
+        </button>
+    
+    </div>
+
+    <!-- Cutie scor rundă -->
+    <div class="round-score-box">
+        <div class="round-title">Întrebarea {{ currentQuestion.index }}</div>
+
+        <div class="round-points-wrapper">
+            <div class="value-with-multiplier">
+                <span class="multiplier mirror" *ngIf="roundMultiplier > 1">(x{{ roundMultiplier }})</span>
+                <span class="value">{{ adjustedRoundPoints() }}</span>
+                <span class="multiplier" *ngIf="roundMultiplier > 1">(x{{ roundMultiplier }})</span>
+            </div>
+        </div>
+
+        <!-- Rând greșeală + miza -->
+        <div class="mistake-row">
+            <button class="mistake-button" (click)="wrongAnswer()" [disabled]="wrongGuesses[currentPlayer] >= 3">Greșeală</button>
+            <div class="strikes-inline">
+            <span *ngFor="let x of createArray(wrongGuesses[currentPlayer])">❌</span>
+            </div>
+            <button class="multiplier-button" (click)="increaseMultiplier()" [disabled]="roundMultiplier == 3">Mărește miza</button>
+            <button class="multiplier-button" (click)="decreaseMultiplier()" [disabled]="roundMultiplier == 1">-</button>
+        </div>
+    </div>
+
+    <!-- Echipa 2 -->
+    <div class="player-score right">
+          <div class="team-name-wrapper">
+            <input
+            [(ngModel)]="teamNames[1]"
+            maxlength="20"
+            appAutoScale
+            #autoScale2="appAutoScale"
+            class="team-name-input"
+            />
+        <button class="random-button" (click)="setRandomTeamName(1)">🎲</button>
+        </div>
+      <div class="score">{{ playerScores[1] }}</div>
+      <button
+        class="multiplier-button"
+        (click)="assignPointsToTeam(1)"
+        [disabled]="lastAssignment !== null"
+        >
+        Adaugă punctele rundei
+        </button>
+    </div>
+  </div>
+     
+  <!-- RĂSPUNSURILE -->
+<div class="question-area">
+  <div class="answers">
+    <!-- Coloana 1 -->
+    <div class="answers-column">
+      <div
+        *ngFor="let ans of currentQuestion.answers.slice(0, 4); let i = index"
+        class="answer"
+        [class.revealed]="ans.revealed"
+        [class.visible]="visibleAnswers[i]"
+        (click)="reveal(i)">
+        
+        <ng-container *ngIf="ans.revealed; else hidden1">
+          <div class="answer-text">{{ ans.text }}</div>
+          <div class="answer-points">{{ ans.points }}</div>
+        </ng-container>
+        
+        <ng-template #hidden1>
+          <img [src]="'assets/images/' + (i + 1) + '.png'" class="hidden-image" />
+        </ng-template>
+      </div>
+    </div>
+
+    <!-- Coloana 2 -->
+    <div class="answers-column">
+      <div
+        *ngFor="let ans of currentQuestion.answers.slice(4, 8); let i = index"
+        class="answer"
+        [class.revealed]="ans.revealed"
+        [class.visible]="visibleAnswers[i + 4]"
+        (click)="reveal(i + 4)">
+        
+        <ng-container *ngIf="ans.revealed; else hidden2">
+          <div class="answer-text">{{ ans.text }}</div>
+          <div class="answer-points">{{ ans.points }}</div>
+        </ng-container>
+        
+        <ng-template #hidden2>
+          <img [src]="'assets/images/' + (i + 5) + '.png'" class="hidden-image" />
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+</div>
