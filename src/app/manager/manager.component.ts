@@ -8,11 +8,12 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   templateUrl: './manager.component.html',
   styleUrls: ['./manager.component.scss'],
-  imports: [CommonModule,FormsModule]
+  imports: [CommonModule, FormsModule],
 })
 export class ManagerComponent implements OnInit {
-  currentQuestion: any;
-  questionNumberInput: number | null = null; // nou
+  currentQuestion: any = null;
+  questionNumberInput: number | null = null;
+  readonly backendUrl = 'http://192.168.1.137:3000';
 
   constructor(private http: HttpClient) {}
 
@@ -20,51 +21,48 @@ export class ManagerComponent implements OnInit {
     this.fetchCurrentQuestion();
   }
 
-  fetchCurrentQuestion() {
-    this.http.get<any>('http://localhost:3000/api/current-question').subscribe({
-      next: (data) => {
-        this.currentQuestion = data;
-      },
-      error: (err) => {
-        console.error('❌ Failed to load current question', err);
-      }
+  fetchCurrentQuestion(): void {
+    this.http.get<any>(`${this.backendUrl}/api/current-question`).subscribe({
+      next: (data) => (this.currentQuestion = data),
+      error: (err) =>
+        console.error('❌ Failed to load current question', err),
     });
   }
 
-  fetchQuestionByNumber() {
-    if (this.questionNumberInput == null || isNaN(this.questionNumberInput)) return;
+  fetchQuestionByNumber(): void {
+    const index = this.questionNumberInput;
+    if (index == null || isNaN(index)) return;
 
-    this.http.get<any>(`http://localhost:3000/api/question/${this.questionNumberInput}`).subscribe({
-      next: (data) => {
-        this.currentQuestion = data;
-      },
-      error: (err) => {
-        console.error('❌ Failed to load question', err);
-      }
+    this.http.get<any>(`${this.backendUrl}/api/question/${index}`).subscribe({
+      next: (data) => (this.currentQuestion = data),
+      error: (err) => console.error('❌ Failed to load question', err),
     });
   }
 
-  triggerWrongAnswer() {
-    if (!this.currentQuestion) return;
-    const index = this.currentQuestion.index;
-
-    this.http.get(`http://localhost:3000/api/current-question/${index}/wrong`).subscribe({
-      next: () => console.log('Wrong answer triggered'),
-      error: err => console.error('Failed to trigger wrong answer', err)
-    });
-  }
-
-  revealAnswer(index: number) {
+  revealAnswer(index: number): void {
     const qIndex = this.currentQuestion?.index;
     if (qIndex == null) return;
 
-    this.http.get(`http://localhost:3000/api/questions/${qIndex}/reveal/${index}`).subscribe({
-      next: () => {
-        console.log(`✅ Revealed answer ${index} for question ${qIndex}`);
-      },
-      error: (err) => {
-        console.error('❌ Failed to trigger reveal', err);
-      }
-    });
+    this.http
+      .get(`${this.backendUrl}/api/questions/${qIndex}/reveal/${index}`)
+      .subscribe({
+        next: () =>
+          console.log(`✅ Revealed answer ${index} for question ${qIndex}`),
+        error: (err) =>
+          console.error('❌ Failed to trigger answer reveal', err),
+      });
+  }
+
+  triggerWrongAnswer(): void {
+    const index = this.currentQuestion?.index;
+    if (index == null) return;
+
+    this.http
+      .get(`${this.backendUrl}/api/current-question/${index}/wrong`)
+      .subscribe({
+        next: () => console.log('⚠️ Wrong answer triggered'),
+        error: (err) =>
+          console.error('❌ Failed to trigger wrong answer', err),
+      });
   }
 }

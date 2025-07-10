@@ -90,10 +90,19 @@ app.get('/api/current-question', (req, res) => {
   }
 });
 
-app.get('/api/question/:questionIndexParam', (req, res) => {
-
+app.get('/api/question/:qIndex', (req, res) => {
   try {
-    const questionIndex = parseInt(req.params.questionIndexParam, 10);
+    console.log(req.params.qIndex);
+
+    const questionIndex = parseInt(req.params.qIndex);
+    console.log(questionIndex);
+
+    if (isNaN(questionIndex)) {
+      return res.status(400).json({ error: 'Invalid index for wrong answer' });
+    }
+    
+    const data = fs.readFileSync(allQuestions, 'utf8');
+    const questions = JSON.parse(data);
 
     const question = questions.find(q => q.index === questionIndex);
 
