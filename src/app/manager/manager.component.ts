@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
 export class ManagerComponent implements OnInit {
   currentQuestion: any = null;
   questionNumberInput: number | null = null;
-  readonly backendUrl = 'http://192.168.1.137:3000';
+  readonly backendUrl = 'http://10.235.215.198:3000';
 
   constructor(private http: HttpClient) {}
 
@@ -59,6 +59,19 @@ export class ManagerComponent implements OnInit {
 
     this.http
       .get(`${this.backendUrl}/api/current-question/${index}/wrong`)
+      .subscribe({
+        next: () => console.log('⚠️ Wrong answer triggered'),
+        error: (err) =>
+          console.error('❌ Failed to trigger wrong answer', err),
+      });
+  }
+
+    triggerWrongAnswerNoCount(): void {
+    const index = this.currentQuestion?.index;
+    if (index == null) return;
+
+    this.http
+      .get(`${this.backendUrl}/api/current-question/${index}/wrong-no-count`)
       .subscribe({
         next: () => console.log('⚠️ Wrong answer triggered'),
         error: (err) =>

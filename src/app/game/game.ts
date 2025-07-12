@@ -40,10 +40,16 @@ export class GameComponent implements OnInit {
   currentQuestionIndex = 0;
   currentQuestion: Question | null = null;
   usedQuestions: number[] = [];
+  usedTeamNames: string[] = [];
 
-  playerScores = [0, 0];
+  curtainVisible = true;
+  gameVisible = false;
+
+  teamScores = [0, 0];
   currentPlayer = 0;
-  wrongGuesses = [0, 0];
+  wrongGuesses = 0;
+
+  showFinalRound = false;
 
   roundNumber = 1;
   roundMultiplier = 1;
@@ -89,7 +95,37 @@ export class GameComponent implements OnInit {
     this.socketService.onWrongAnswer().subscribe(data => {
       this.wrongAnswer(); // metoda care deja există în componentă
     });
+
+    this.socketService.onWrongAnswerNoCount().subscribe(data => {
+      this.wrongAnswerNoCount(); // metoda care deja există în componentă
+    });
+
+    this.questionSync.getUsedTeamNames().subscribe({
+      next: (res: { usedTeamNames: string[] }) => {
+        this.usedTeamNames = res.usedTeamNames;
+      },
+      error: err => {
+        console.error('❌ Failed to load used team names', err);
+      }
+    });
   }
+
+openCurtain() {
+  const left = document.querySelector('.curtain-left');
+  const right = document.querySelector('.curtain-right');
+
+  left?.classList.add('open');
+  right?.classList.add('open');
+
+    this.introAudio.currentTime = 0;
+    this.introAudio.play();
+
+  // după 2 secunde (cât durează cortina)
+  setTimeout(() => {
+    this.curtainVisible = false;
+    this.gameVisible = true; // declanșează fade-in
+  }, 2000);
+}
 
   loadInitialUsedQuestions() {
     this.questionSync.loadUsedQuestions().subscribe({
@@ -109,18 +145,23 @@ export class GameComponent implements OnInit {
   }
 
   resetGame() {
-    this.playerScores = [0, 0];
-    this.wrongGuesses = [0, 0];
+    // Trimite scorurile către backend
+
+    this.usedTeamNames.push(this.teamNames[0]);
+    this.usedTeamNames.push(this.teamNames[1]);
+
+    this.questionSync.saveTeamScore(this.teamNames[0], this.teamScores[0]).subscribe();
+    this.questionSync.saveTeamScore(this.teamNames[1], this.teamScores[1]).subscribe();
+
+    this.teamScores = [0, 0];
+    this.wrongGuesses = 0;
     this.roundPoints = 0;
     this.roundMultiplier = 1;
     this.roundNumber = 1;
-
-    // opțional: resetează echipele la numele implicite
-     this.teamNames = ['Echipa 1', 'Echipa 2'];
-
-    // Rămânem pe întrebarea curentă, doar că începem scorul de la 0
+    this.teamNames = ['Echipa 1', 'Echipa 2'];
     this.loadCurrentQuestion();
   }
+
 
   loadCurrentQuestion(isFirstQuestion: boolean = false) {
 
@@ -151,7 +192,7 @@ export class GameComponent implements OnInit {
     this.usedQuestions.push(this.currentQuestionIndex); // adăugăm întrebarea la cele folosite
     this.roundPoints = 0;         // resetăm punctajul rundei
     this.roundMultiplier = 1;     // resetăm multiplicatorul (x1)
-    this.wrongGuesses = [0, 0];   // resetăm greșelile
+    this.wrongGuesses = 0;   // resetăm greșelile
     this.readyForNext = false;    // marcăm că putem merge la următoarea întrebare
 
     this.visibleAnswers = new Array(this.currentQuestion.answers.length).fill(false);
@@ -161,7 +202,10 @@ export class GameComponent implements OnInit {
   }
 
   animateMaskedAnswersIn() {
-    this.tick.play();
+    if(!this.curtainVisible)
+    {
+      this.tick.play();
+    }
     this.currentQuestion?.answers.forEach((_, i) => {
       setTimeout(() => {
         this.visibleAnswers[i] = true;
@@ -175,7 +219,11 @@ export class GameComponent implements OnInit {
     const ans = this.currentQuestion.answers[index];
     if (!ans.revealed) {
       ans.revealed = true;
-      this.roundPoints += ans.points;
+
+      if(this.wrongGuesses < 3)
+      {
+        this.roundPoints += ans.points;
+      }
 
       // Play correct answer sound
       this.correctAudio.currentTime = 0;
@@ -183,15 +231,15 @@ export class GameComponent implements OnInit {
     }
   }
 
-  createArray(n: number): any[] {
-    return Array(n);
+  createArray(count: number): any[] {
+    return new Array(count);
   }
 
   assignPointsToTeam(teamIndex: number) {
     if (this.lastAssignment) return; // deja s-au atribuit punctele în această rundă
 
     const points = this.adjustedRoundPoints();
-    this.playerScores[teamIndex] += points;
+    this.teamScores[teamIndex] += points;
 
     this.roundEndAudio.currentTime = 0;
     this.roundEndAudio.play();
@@ -207,13 +255,19 @@ export class GameComponent implements OnInit {
     if (!this.lastAssignment) return;
 
     const { teamIndex, points } = this.lastAssignment;
-    this.playerScores[teamIndex] -= points;
+    this.teamScores[teamIndex] -= points;
     this.lastAssignment = null;
     this.readyForNext = false;
   }
 
   nextQuestion() {
     this.roundNumber++;
+
+    if (this.roundNumber === 5) {
+      this.showFinalRound = true;
+      setTimeout(() => this.showFinalRound = false, 3000); // ascunde după 3 secunde
+    }
+
     this.lastAssignment = null;
 
     this.questionSync.addUsedQuestion(this.currentQuestionIndex).subscribe({
@@ -252,14 +306,25 @@ export class GameComponent implements OnInit {
     }
   }
 
+  decreaseWrongAnswer(): void {
+    if (this.wrongGuesses > 0) {
+      this.wrongGuesses--;
+    }
+  }
+
   wrongAnswer() {
+
+    if(this.wrongGuesses >=3)
+    {
+      return;
+    }
 
     this.wrongSound.currentTime = 0; // resetează sunetul dacă e deja în redare
     this.wrongSound.play();
 
     setTimeout(() => {
       this.showBigX = true;
-      this.wrongGuesses[this.currentPlayer]++;
+      this.wrongGuesses++;
 
       // Dispare după 2 secunde
       setTimeout(() => {
@@ -267,10 +332,26 @@ export class GameComponent implements OnInit {
       }, 2000);
     }, 500);
   }
+
+  wrongAnswerNoCount() {
+
+    this.wrongSound.currentTime = 0; // resetează sunetul dacă e deja în redare
+    this.wrongSound.play();
+
+    setTimeout(() => {
+      this.showBigX = true;
+
+      // Dispare după 2 secunde
+      setTimeout(() => {
+        this.showBigX = false;
+      }, 2000);
+    }, 500);
+  }
+
   leftAnswers(): Answer[] {
     return this.currentQuestion?.answers.filter((_, i) => i % 2 === 0) || [];
   }
-
+  
   rightAnswers(): Answer[] {
     return this.currentQuestion?.answers.filter((_, i) => i % 2 !== 0) || [];
   }
@@ -282,25 +363,23 @@ export class GameComponent implements OnInit {
   return { total, used, remaining };
   }
 
-setRandomTeamName(teamIndex: number) {
+  setRandomTeamName(teamIndex: number) {
     if (this.availableTeamNames.length === 0) return;
+ 
+    const used = new Set([...this.teamNames, ...this.usedTeamNames]);
 
-    const used = new Set(this.teamNames);
     const filtered = this.availableTeamNames.filter(name => !used.has(name));
     const pool = filtered.length > 0 ? filtered : this.availableTeamNames;
 
     const random = pool[Math.floor(Math.random() * pool.length)];
     this.teamNames[teamIndex] = random;
 
-    // Apelează resize explicit după setare
-    setTimeout(() => {
-      if (teamIndex === 0) {
-        this.autoScale1?.resize();
-      } else {
-        this.autoScale2?.resize();
-      }
-    });
+    // actualizăm local lista de echipe folosite
+    this.usedTeamNames.push(random);
   }
+
+
+
 
   logAvailableQuestionIndexes() {
     const available: number[] = [];

@@ -12,7 +12,9 @@
     {{ currentQuestion?.index }}. {{ currentQuestion?.question }}
   </div>
 
-  <button class="wrong-button" (click)="triggerWrongAnswer()">Greșeală</button>
+  <button class="wrong-button" (click)="triggerWrongAnswerNoCount()">Greșeală Simpla</button>
+  
+  <button class="wrong-button" (click)="triggerWrongAnswer()">Greșeală Runda</button>
 
   <div class="answer-list">
     <div 

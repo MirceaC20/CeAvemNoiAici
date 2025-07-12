@@ -1,6 +1,11 @@
+<div class="curtain-container" *ngIf="curtainVisible" (click)="openCurtain()">
+  <img src="assets/curtain-left.jpg" class="curtain curtain-left" />
+  <img src="assets/curtain-right.jpg" class="curtain curtain-right" />
+</div>
+
 <div class="game-wrapper" *ngIf="currentQuestion">
   <div class="big-x" *ngIf="showBigX">❌</div>
-  
+  <div class="final-round-banner" *ngIf="showFinalRound">🏁 RUNDA FINALĂ 🏁</div>
 <div class="round-indicator">
         Runda {{ roundNumber }}
     </div>
@@ -33,7 +38,7 @@
         />
         <button class="random-button" (click)="setRandomTeamName(0)">🎲</button>
         </div>
-      <div class="score">{{ playerScores[0] }}</div>
+      <div class="score">{{ teamScores[0] }}</div>
       <button
         class="multiplier-button"
         (click)="assignPointsToTeam(0)"
@@ -58,9 +63,10 @@
 
         <!-- Rând greșeală + miza -->
         <div class="mistake-row">
-            <button class="mistake-button" (click)="wrongAnswer()" [disabled]="wrongGuesses[currentPlayer] >= 3">Greșeală</button>
+            <button class="mistake-button" (click)="decreaseWrongAnswer()" [disabled]="wrongGuesses == 0">-</button>
+            <button class="mistake-button" (click)="wrongAnswer()" [disabled]="wrongGuesses >= 3">Greșeală</button>
             <div class="strikes-inline">
-            <span *ngFor="let x of createArray(wrongGuesses[currentPlayer])">❌</span>
+            <span *ngFor="let x of createArray(wrongGuesses)">❌</span>
             </div>
             <button class="multiplier-button" (click)="increaseMultiplier()" [disabled]="roundMultiplier == 3">Mărește miza</button>
             <button class="multiplier-button" (click)="decreaseMultiplier()" [disabled]="roundMultiplier == 1">-</button>
@@ -79,7 +85,7 @@
             />
         <button class="random-button" (click)="setRandomTeamName(1)">🎲</button>
         </div>
-      <div class="score">{{ playerScores[1] }}</div>
+      <div class="score">{{ teamScores[1] }}</div>
       <button
         class="multiplier-button"
         (click)="assignPointsToTeam(1)"

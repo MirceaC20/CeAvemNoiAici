@@ -58,12 +58,12 @@ describe('GameComponent', () => {
     component.reveal(0); // index 0 = Cai (42)
 
     expect(component.currentQuestion?.answers[0].revealed).toBeTrue();
-    expect(component.playerScores[0]).toBe(42);
+    expect(component.teamScores[0]).toBe(42);
   });
 
   it('should handle wrong answers', () => {
     component.wrongAnswer();
-    expect(component.wrongGuesses[0]).toBe(1);
+    expect(component.wrongGuesses).toBe(1);
   });
 
   it('should go to next question and switch player', () => {

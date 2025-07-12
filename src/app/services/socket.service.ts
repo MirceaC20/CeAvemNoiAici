@@ -7,7 +7,7 @@ export class SocketService {
   private socket: Socket;
 
     constructor() {
-        this.socket = io('http://localhost:3000');
+        this.socket = io('http://10.235.215.198:3000');
 
         this.socket.on('connect', () => {
             console.log('✅ Connected to backend via socket.io');
@@ -21,6 +21,12 @@ export class SocketService {
     onWrongAnswer(): Observable<{ answerIndex: number }> {
     return new Observable(observer => {
         this.socket.on('wrong-answer', data => observer.next(data));
+    });
+    }
+
+    onWrongAnswerNoCount(): Observable<{ answerIndex: number }> {
+    return new Observable(observer => {
+        this.socket.on('wrong-answer-no-count', data => observer.next(data));
     });
     }
 

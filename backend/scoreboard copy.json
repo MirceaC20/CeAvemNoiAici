@@ -1,0 +1,40 @@
+{
+  "teams": [
+    {
+      "name": "Echipa 1",
+      "scores": [
+        112
+      ]
+    },
+    {
+      "name": "Echipa 2",
+      "scores": [
+        174
+      ]
+    },
+    {
+      "name": "Piticii de capră",
+      "scores": [
+        436
+      ]
+    },
+    {
+      "name": "Cocoșii de sticlă",
+      "scores": [
+        66
+      ]
+    },
+    {
+      "name": "Iepurii panicați",
+      "scores": [
+        0
+      ]
+    },
+    {
+      "name": "Veverițele topite",
+      "scores": [
+        549
+      ]
+    }
+  ]
+}

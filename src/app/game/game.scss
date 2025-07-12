@@ -305,6 +305,75 @@
   color: red;
 }
 
+.final-round-banner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6vw; // era 8rem
+  color: gold;
+  background: #000;
+  border: 1.5vw solid gold; // era 15px
+  padding: 3vh 5vw; // era 40px 60px
+  border-radius: 2vw; // era 30px
+  text-shadow: 0 0 1vw gold, 0 0 2vw orange;
+  z-index: 99998;
+  animation: pulseFinal 1.5s ease-out;
+  pointer-events: none;
+  max-width: 90vw;
+  text-align: center;
+}
+
+
+@keyframes pulseFinal {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .final-round-banner {
+    font-size: 8vw;
+    padding: 2vh 4vw;
+  }
+}
+
+
+.curtain-container {
+  position: fixed;
+  inset: 0;
+  background: #000; // opțional, pentru fundal întunecat
+  z-index: 999999;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  pointer-events: all;
+
+  .curtain {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 2s ease-in-out;
+  }
+
+  .curtain-left.open {
+    transform: translateX(-100%);
+  }
+
+  .curtain-right.open {
+    transform: translateX(100%);
+  }
+}
+
 .big-x {
   position: fixed; // era posibil absolute cu context greșit
   top: 50%;
